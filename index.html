@@ -1,457 +1,930 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+
+
   <meta
+
     name="description"
+
     content="The Happy Cat Kitchen — joyful event catering, retreat chef'ing and pop-up food experiences from Penzance, Cornwall."
+
   />
+
+
 
   <title>The Happy Cat Kitchen | Penzance, Cornwall</title>
 
+
+
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Film launch: isolated styles; all other website sections remain unchanged. */
+    .film-hero { position: relative; }
+    .film-start-overlay {
+      position: absolute; inset: 0; z-index: 5;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(0,0,0,.28);
+    }
+    .film-start-overlay[hidden], .sound-toggle[hidden] { display: none !important; }
+    .film-start-button {
+      max-width: calc(100% - 32px); padding: 18px 28px;
+      border: 2px solid rgba(255,255,255,.9); border-radius: 999px;
+      background: rgba(17,24,28,.85); color: white;
+      font-family: inherit;
+      font-size: clamp(16px, 2.2vw, 23px);
+      font-weight: 700; cursor: pointer;
+      box-shadow: 0 8px 32px rgba(0,0,0,.3);
+    }
+    .film-start-button:hover, .film-start-button:focus-visible {
+      background: #222; outline-offset: 4px;
+    }
+  </style>
 </head>
+
+
 
 <body>
 
+
+
   <!-- =====================================================
+
        HEADER
+
   ====================================================== -->
+
+
 
   <header class="site-header">
 
+
+
     <a href="#home" class="brand" aria-label="The Happy Cat Kitchen home">
+
       <img
+
         src="images/placeholder-logo.png"
+
         alt="The Happy Cat Kitchen"
+
         class="brand-logo"
+
       />
+
     </a>
+
+
 
     <nav class="desktop-nav" aria-label="Main navigation">
+
       <a href="#home">Home</a>
+
       <a href="menu.html">Our Food</a>
+
       <a href="#services">Our Services</a>
+
       <a href="#story">Our Story</a>
+
       <a href="contact.html">Contact</a>
+
     </nav>
 
+
+
     <a href="contact.html" class="header-cta">
+
       Plan Your Event <span>🐾</span>
+
     </a>
+
+
 
   </header>
 
 
+
+
+
   <main id="home">
 
+
+
     <!-- =====================================================
+
          CINEMATIC HERO
+
     ====================================================== -->
+
+
 
     <section class="film-hero" aria-label="The Happy Cat Kitchen film">
 
+
+
       <video
+
         class="hero-video"
-        autoplay
-        muted
         playsinline
-        preload="metadata"
+
+        preload="auto"
+
       >
+
         <source
+
           src="video/Happy_Cat_Kitchen_Video.mp4"
+
           type="video/mp4"
+
         />
 
+
+
         Your browser does not support the video tag.
+
       </video>
 
-      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn sound on and replay the film">
+
+
+      <div class="film-start-overlay" id="filmStartOverlay">
+        <button class="film-start-button" id="filmStartButton" type="button">
+          <span aria-hidden="true">▶</span> Play Film with Sound 🔊
+        </button>
+      </div>
+
+      <button class="sound-toggle" id="soundToggle" type="button" aria-label="Turn sound off" hidden>
+
         <span class="sound-icon">🔊</span>
-        <span class="sound-label">Tap to watch with sound 🔊</span>
+
+        <span class="sound-label">Sound off</span>
+
       </button>
 
+
+
       <div class="scroll-cue" aria-hidden="true">
+
         <span>Discover Happy Cat</span>
+
         <span class="scroll-arrow">↓</span>
+
       </div>
+
+
 
     </section>
 
 
+
+
+
     <!-- =====================================================
+
          INTRODUCTION
+
     ====================================================== -->
+
+
 
     <section class="intro-section">
 
+
+
       <div class="intro-copy">
+
+
 
         <span class="eyebrow">Welcome to Happy Cat</span>
 
+
+
         <h1>
+
           Food made with a<br />
+
           little bit of love.
+
         </h1>
 
+
+
         <p class="handwritten">
+
           And quite a lot of happiness.
+
         </p>
+
+
 
         <span class="paw-accent">🐾</span>
 
-        <p>
-          The Happy Cat Kitchen creates beautiful, flavourful food
-          for life's special moments. From private events and
-          celebrations, to retreat dining and pop-up food experiences,
-          we cook with fresh ingredients, big flavour and a genuine
-          love for bringing people together.
-        </p>
+
 
         <p>
-          Based in Penzance, Cornwall, we're inspired by the sea,
-          the season and the simple joy of good food shared with
-          great people.
+
+          The Happy Cat Kitchen creates beautiful, flavourful food
+
+          for life's special moments. From private events and
+
+          celebrations, to retreat dining and pop-up food experiences,
+
+          we cook with fresh ingredients, big flavour and a genuine
+
+          love for bringing people together.
+
         </p>
+
+
+
+        <p>
+
+          Based in Penzance, Cornwall, we're inspired by the sea,
+
+          the season and the simple joy of good food shared with
+
+          great people.
+
+        </p>
+
+
 
         <a href="#services" class="primary-button">
+
           Discover Our Services <span>🐾</span>
+
         </a>
 
+
+
       </div>
 
+
+
       <div class="intro-image">
+
         <img
+
           src="images/events.jpg"
+
           alt="Beautiful food prepared by The Happy Cat Kitchen"
+
         />
+
       </div>
+
+
 
     </section>
 
 
+
+
+
     <!-- =====================================================
+
          SERVICES
+
     ====================================================== -->
+
+
 
     <section class="services-section" id="services">
 
+
+
       <div class="section-heading">
+
         <span class="eyebrow">What we do</span>
+
+
 
         <h2>Three ways to bring people together.</h2>
 
+
+
         <div class="heading-paw">🐾</div>
+
       </div>
+
+
+
 
 
       <div class="services-grid">
 
+
+
         <article class="service-card">
 
+
+
           <div class="service-image">
+
             <img
+
               src="images/events.jpg"
+
               alt="Events catering"
+
             />
+
           </div>
 
+
+
           <div class="service-content">
+
             <h3>Events Catering</h3>
 
+
+
             <p>
+
               Delicious, vibrant food for private events, parties and
+
               gatherings. From intimate dinners to larger celebrations,
+
               we create food that suits your occasion and your guests.
+
             </p>
 
+
+
             <a href="contact.html" class="text-link">
+
               <span class="link-arrow">→</span>
+
               Tell us about your event
+
             </a>
+
           </div>
+
+
 
         </article>
 
 
+
+
+
         <article class="service-card">
 
+
+
           <div class="service-image">
+
             <img
+
               src="images/retreat.jpg"
+
               alt="Retreat chef'ing"
+
             />
+
           </div>
 
+
+
           <div class="service-content">
+
             <h3>Retreat Chef'ing</h3>
 
+
+
             <p>
+
               Wholesome, nourishing meals tailored for retreats and
+
               wellness experiences. Thoughtful food that supports,
+
               energises and delights your guests.
+
             </p>
 
+
+
             <a href="contact.html" class="text-link">
+
               <span class="link-arrow">→</span>
+
               Plan your retreat
+
             </a>
+
           </div>
 
+
+
         </article>
+
+
+
 
 
         <article class="service-card">
 
+
+
           <div class="service-image">
+
             <img
+
               src="images/popup.jpg"
+
               alt="Happy Cat Kitchen pop-up events"
+
             />
+
           </div>
+
+
 
           <div class="service-content">
+
             <h3>Pop-Up Events</h3>
 
+
+
             <p>
+
               Creative food experiences at pop-ups, markets and special
+
               events. Fresh, seasonal, full of flavour and always made
+
               with a smile.
+
             </p>
 
+
+
             <a href="contact.html" class="text-link">
+
               <span class="link-arrow">→</span>
+
               Let's cook something up
+
             </a>
+
           </div>
+
+
 
         </article>
 
+
+
       </div>
+
+
 
     </section>
 
 
+
+
+
     <!-- =====================================================
+
          FOOD SHOWCASE
+
     ====================================================== -->
+
+
 
     <section class="food-section" id="food">
 
+
+
       <div class="food-copy">
+
+
 
         <span class="eyebrow light">From our kitchen</span>
 
+
+
         <h2>
+
           Fresh ingredients.<br />
+
           Big flavour.
+
         </h2>
 
+
+
         <p class="handwritten orange">
+
           Happy people.
+
         </p>
+
+
 
         <span class="paw-accent light-paw">🐾</span>
 
+
+
         <p>
+
           From colourful feasts to simple, honest dishes, our food is
+
           all about fresh seasonal ingredients, generous flavours and
+
           plates made to be shared.
+
         </p>
 
+
+
         <a href="#services" class="cream-button">
+
           Explore Our Food <span>→</span>
+
         </a>
 
+
+
       </div>
+
+
+
 
 
       <div class="food-gallery">
 
+
+
         <figure class="gallery-image gallery-large">
+
           <img
+
             src="images/events.jpg"
+
             alt="Colourful Happy Cat Kitchen food"
+
           />
+
         </figure>
 
+
+
         <figure class="gallery-image">
+
           <img
+
             src="images/retreat.jpg"
+
             alt="Fresh retreat food"
+
           />
+
         </figure>
 
+
+
         <figure class="gallery-image">
+
           <img
+
             src="images/popup.jpg"
+
             alt="Happy Cat Kitchen pop-up food"
+
           />
+
         </figure>
+
+
 
       </div>
+
+
 
     </section>
 
 
+
+
+
     <!-- =====================================================
+
          CORNWALL STORY
+
     ====================================================== -->
+
+
 
     <section class="cornwall-section" id="story">
 
+
+
       <div class="cornwall-image">
+
         <img
+
           src="images/placeholder-hero.jpg"
+
           alt="The Happy Cat Kitchen in Penzance, Cornwall"
+
         />
+
       </div>
+
+
 
       <div class="cornwall-copy">
 
+
+
         <span class="eyebrow">Our home</span>
+
+
 
         <h2>Made in Cornwall.</h2>
 
+
+
         <p class="handwritten">
+
           Made with love.
+
         </p>
+
+
 
         <span class="paw-accent">🐾</span>
 
+
+
         <p>
+
           Penzance is home, and it inspires everything we do.
+
           From the coastline and local produce to the warmth of the
+
           community, Cornwall's colours, flavours and spirit sit at
+
           the heart of The Happy Cat Kitchen.
+
         </p>
+
+
 
       </div>
 
+
+
     </section>
+
+
+
 
 
     <!-- =====================================================
+
          EVENT CTA
+
     ====================================================== -->
+
+
 
     <section class="event-cta">
 
+
+
       <img
+
         src="images/cat.png"
+
         alt=""
+
         class="cta-cat"
+
         aria-hidden="true"
+
       />
+
+
 
       <div class="event-cta-copy">
 
+
+
         <span class="eyebrow">Let's make something lovely</span>
+
+
 
         <h2>Got something delicious in mind?</h2>
 
+
+
         <p>
+
           Tell us what you're planning and let's see what we can
+
           cook up together.
+
         </p>
 
+
+
         <a href="contact.html" class="primary-button">
+
           Plan Your Event <span>🐾</span>
+
         </a>
 
+
+
       </div>
+
+
 
       <div class="cta-paws" aria-hidden="true">
+
         🐾
+
       </div>
 
+
+
     </section>
+
+
 
   </main>
 
 
+
+
+
   <!-- =====================================================
+
        FOOTER
+
   ====================================================== -->
+
+
 
   <footer class="site-footer">
 
+
+
     <div class="footer-brand">
 
+
+
       <img
+
         src="images/placeholder-logo.png"
+
         alt="The Happy Cat Kitchen"
+
         class="footer-logo"
+
       />
+
+
 
       <p>Good Food, Made Purrrrfectly. 🐾</p>
 
+
+
     </div>
+
+
+
 
 
     <div class="footer-details">
 
-      <p>
-        <strong>Penzance, Cornwall</strong>
-      </p>
+
 
       <p>
-        <a href="mailto:hello@thehappycatkitchen.co.uk">
-          hello@thehappycatkitchen.co.uk
-        </a>
+
+        <strong>Penzance, Cornwall</strong>
+
       </p>
+
+
+
+      <p>
+
+        <a href="mailto:hello@thehappycatkitchen.co.uk">
+
+          hello@thehappycatkitchen.co.uk
+
+        </a>
+
+      </p>
+
+
 
     </div>
+
+
+
 
 
     <div class="footer-links">
 
+
+
       <a href="#home">Home</a>
+
       <a href="#food">Our Food</a>
+
       <a href="#services">Our Services</a>
+
       <a href="#story">Our Story</a>
+
       <a href="contact.html">Contact</a>
 
+
+
     </div>
+
+
+
 
 
     <div class="footer-bottom">
 
+
+
       <p>
+
         © 2026 The Happy Cat Kitchen. All rights reserved.
+
       </p>
+
+
 
       <span>Made with love in Cornwall 🐾</span>
 
+
+
     </div>
+
+
 
   </footer>
 
-  <script>
-  const heroVideo = document.querySelector(".hero-video");
-  const soundToggle = document.getElementById("soundToggle");
-  const soundIcon = soundToggle.querySelector(".sound-icon");
-  const soundLabel = soundToggle.querySelector(".sound-label");
 
-  soundToggle.addEventListener("click", () => {
-    if (heroVideo.muted) {
+
+  <script>
+    const heroVideo = document.querySelector(".hero-video");
+    const soundToggle = document.getElementById("soundToggle");
+    const soundIcon = soundToggle.querySelector(".sound-icon");
+    const soundLabel = soundToggle.querySelector(".sound-label");
+    const filmStartOverlay = document.getElementById("filmStartOverlay");
+    const filmStartButton = document.getElementById("filmStartButton");
+
+    // Browsers allow sound when playback begins from a visitor's click.
+    filmStartButton.addEventListener("click", async () => {
+      heroVideo.currentTime = 0;
       heroVideo.muted = false;
       heroVideo.volume = 1;
+      try {
+        await heroVideo.play();
+        filmStartOverlay.hidden = true;
+        soundToggle.hidden = false;
+        soundIcon.textContent = "🔊";
+        soundLabel.textContent = "Sound off";
+        soundToggle.setAttribute("aria-label", "Turn sound off");
+      } catch (error) {
+        filmStartButton.textContent = "▶ Tap to play film";
+      }
+    });
 
-      soundIcon.textContent = "🔊";
-      soundLabel.textContent = "Sound off";
-      soundToggle.setAttribute("aria-label", "Turn sound off");
-    } else {
-      heroVideo.muted = true;
+    soundToggle.addEventListener("click", () => {
+      heroVideo.muted = !heroVideo.muted;
+      soundIcon.textContent = heroVideo.muted ? "🔇" : "🔊";
+      soundLabel.textContent = heroVideo.muted ? "Sound on" : "Sound off";
+      soundToggle.setAttribute("aria-label", heroVideo.muted ? "Turn sound on" : "Turn sound off");
+    });
 
-      soundIcon.textContent = "🔇";
-      soundLabel.textContent = "Sound on";
-      soundToggle.setAttribute("aria-label", "Turn sound on");
-    }
-  });
-</script>
+    // Offer an obvious replay once the film has finished.
+    heroVideo.addEventListener("ended", () => {
+      filmStartButton.innerHTML = '<span aria-hidden="true">▶</span> Replay Film with Sound 🔊';
+      filmStartOverlay.hidden = false;
+      soundToggle.hidden = true;
+    });
+  </script>
+
+
 
 </body>
+
 </html>
